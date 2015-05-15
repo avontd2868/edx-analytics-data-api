@@ -12,3 +12,4 @@ edX Data Analytics API Version 0
     endpoints
     courses
     problems
+    videos

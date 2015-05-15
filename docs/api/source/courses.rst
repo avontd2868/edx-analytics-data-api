@@ -1,17 +1,10 @@
-##################################################
-Course Information API Module
-##################################################
+#######################
+Course Information API
+#######################
 
-This page contains information to:
-
-* `Get Weekly Course Activity`_
-* `Get Recent Course Activity`_
-* `Get the Course Enrollment`_
-* `Get the Course Enrollment by Mode`_
-* `Get the Course Enrollment by Birth Year`_
-* `Get the Course Enrollment by Education Level`_
-* `Get the Course Enrollment by Gender`_
-* `Get the Course Enrollment by Location`_
+.. contents:: Section Contents 
+  :local:
+  :depth: 1
   
 .. _Get Weekly Course Activity:
 
@@ -41,7 +34,6 @@ Get Weekly Course Activity
         "created": "2014-12-10T193104"
       }
     ]
-
 
 .. _Get Recent Course Activity:
 
@@ -261,6 +253,48 @@ See `ISO 3166 country codes`_ for more information.
         "count": 416,
         "created": "2014-12-10T193146"
       }
+    ]
+
+.. _Get the Course Video Data:
+
+************************************************
+Get the Course Video Data
+************************************************
+
+.. autoclass:: analytics_data_api.v0.views.courses.VideosListView
+
+**Example response**
+
+.. code-block:: json
+
+    HTTP 200 OK  
+    Vary: Accept   
+    Content-Type: text/html; charset=utf-8   
+    Allow: GET, HEAD, OPTIONS 
+
+    [
+      {
+        "pipeline_video_id": "UniversityX/UX.3.01x/1T2015|i4x-UniversityX-
+          UX_3_01x-video-02874e0ae0c74ae7b16faa5d6fdc8085",
+        "encoded_module_id": "i4x-UX-UT_3_01x-video-
+          02874e0ae0c74ae7b16faa5d6fdc8085",
+        "duration": 142,
+        "segment_length": 5,
+        "start_views": 2,
+        "end_views": 0,
+        "created": "2015-04-15T214158"
+      },
+      {
+        "pipeline_video_id": "UniversityX/UX.3.01x/1T2015|i4x-UniversityX-
+          UX_3_01x-video-03454e0ae0c72ae7b16fab3d6fdc2143",
+        "encoded_module_id": "i4x-UX-UT_3_01x-video-
+          03454e0ae0c72ae7b16fab3d6fdc2143",
+        "duration": 66,
+        "segment_length": 5,
+        "start_views": 1044,
+        "end_views": 0,
+        "created": "2015-04-15T214158"
+      },     
     ]
 
 .. include:: links.rst
